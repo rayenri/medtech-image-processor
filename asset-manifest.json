@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/medtech-image-processor/static/css/main.bc87f347.css",
-    "main.js": "/medtech-image-processor/static/js/main.062e4074.js",
+    "main.js": "/medtech-image-processor/static/js/main.1d2a5a60.js",
     "index.html": "/medtech-image-processor/index.html",
     "main.bc87f347.css.map": "/medtech-image-processor/static/css/main.bc87f347.css.map",
-    "main.062e4074.js.map": "/medtech-image-processor/static/js/main.062e4074.js.map"
+    "main.1d2a5a60.js.map": "/medtech-image-processor/static/js/main.1d2a5a60.js.map"
   },
   "entrypoints": [
     "static/css/main.bc87f347.css",
-    "static/js/main.062e4074.js"
+    "static/js/main.1d2a5a60.js"
   ]
 }
