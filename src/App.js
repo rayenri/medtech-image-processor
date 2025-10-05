@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 // Backend API URL - Update this when deploying to Hugging Face Spaces
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:7860';
+const API_BASE_URL = 'https://rayen96-medtech-image-processor.hf.space';
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
