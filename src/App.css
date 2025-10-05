@@ -1,0 +1,365 @@
+/* App.css */
+.App {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #007bff 0%, #ffffff 50%, #007bff 100%);
+  color: #343a40;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #dc3545;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #343a40;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-main {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.control-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid #007bff;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.file-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-input-label {
+  cursor: pointer;
+  background: #f8f9fa;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.file-input-label:hover {
+  background: #e9ecef;
+  border-color: #dc3545;
+}
+
+.file-input-text {
+  color: #343a40;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.selected-file-name {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.image-display {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image-section {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #343a40;
+  text-align: center;
+}
+
+.display-image {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
+  border: 2px solid #007bff;
+  object-fit: contain;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px dashed #6c757d;
+  border-radius: 8px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.phase-selection {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.phase-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.phase-option input[type="radio"] {
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+
+.phase-label {
+  color: #343a40;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.process-button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #007bff;
+  color: white;
+  min-width: 150px;
+}
+
+.process-button:hover:not(:disabled) {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.process-button:disabled {
+  background: rgba(108, 117, 125, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(40, 167, 69, 0.1);
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.status-text {
+  font-size: 0.9rem;
+}
+
+.error-message {
+  background: rgba(220, 53, 69, 0.1);
+  border: 2px solid #dc3545;
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message p {
+  margin: 0;
+  color: #dc3545;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+.App-footer {
+  background: rgba(108, 117, 125, 0.8);
+  padding: 0.2rem 1rem;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.App-footer p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .App-main {
+    padding: 0.5rem;
+    gap: 0.8rem;
+  }
+  
+  .control-panel {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .phase-selection {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .image-display {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .display-image {
+    max-height: 250px;
+  }
+  
+  .placeholder-image {
+    height: 200px;
+  }
+}
+
+/* Loading Animation */
+.process-button:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Logo-inspired decorative elements */
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #dc3545, transparent);
+  border-radius: 1px;
+}
+
+/* Two-column layout decorative elements */
+.settings-panel::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #dc3545;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.preview-panel::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.controls-section::before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background: #dc3545;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Global connection arc similar to logo */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  border: 1px solid rgba(173, 181, 189, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
